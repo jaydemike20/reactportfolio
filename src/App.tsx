@@ -5,20 +5,63 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      {/* navbar and logo */}
+
+      <div className='banner'>
+
+        <div className='title'>
+          <h1>Jayde Mike</h1>
+        </div>
+
+        <nav>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About</a></li>
+            <li><a href="#">Service</a></li>
+            <li><a href="#">Work</a></li>
+            <li><a href="#">Contact</a></li>
+          </ul>
+       </nav>
+
+
+
+
+
+
+      </div>
+
+      <div className='home'>
+
+      <div className='lefthome'>
+
+        <h1>Hello!</h1>
+        <h3>I'm Jayde Mike Engracia</h3>
+        <p>Welcome to my Portfolio!</p>
+
+        <div className='icons'>
+          <ul>
+            <li><a>Fb</a></li>
+            <li><a>Fb</a></li>
+            <li><a>Fb</a></li>
+            <li><a>Fb</a></li>
+          </ul>
+        </div>
+
+
+
+      </div>
+
+
+
+
+      </div>
+
+
+
+
+
+
     </div>
   );
 }

@@ -1,5 +1,9 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Scribble&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 .App-logo {
@@ -35,4 +39,58 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Rubik+Scribble';
+}
+
+.banner {
+  background-color: #111;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.title {
+  padding-left: 100px;
+}
+
+.title h1 {
+  margin: 0;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+nav {
+  padding-right: 100px;
+}
+
+nav ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+nav li {
+  margin-right: 100px;
+}
+
+nav a {
+  font-size: 20px;
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  transition: color 0.3s ease-in-out;
+}
+
+nav a:hover {
+  color: #4d4d4d;
 }
