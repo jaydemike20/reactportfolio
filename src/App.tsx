@@ -52,38 +52,39 @@ function App() {
 
       <div className='home'>
 
-      <div className='lefthome'>
+        <div className='lefthome'>
 
-        <h1>{greeting}</h1>
-        <h3>I'm Jayde Mike Engracia   |</h3>
-        <p>Aspiring Full-Stack Developer and Software Engineer 👨‍💻</p>
+          <h1>{greeting}</h1>
+          <h3>I'm Jayde Mike Engracia   |</h3>
+          <p>Aspiring Full-Stack Developer and Software Developer 👨‍💻</p>
 
-        <Button variant="contained" color='success'>Hire Me!</Button>
+          <Button variant="contained" color='success'>Hire Me!</Button>
 
 
-        <div className='icons'>
-          <ul>
-            <li><a>Fb</a></li>
-            <li><a>Twitter</a></li>
-            <li><a>Linkedin</a></li>
-            <li><a>Github</a></li>
-          </ul>
+          <div className='icons'>
+            <ul>
+              <li><a>Fb</a></li>
+              <li><a>Twitter</a></li>
+              <li><a>LinkedIn </a></li>
+              <li><a>GitHub</a></li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div className="righthome">
+          <img src={profileImage} alt='Mi imahe' className='imahe' />
         </div>
 
 
 
       </div>
 
-      <div className="righthome">
-        <img src={profileImage} alt='Mi imahe' />
-
+      <div className='about'>
+        <h2>About</h2>
+        <p>I am currently 4th year student in University of Science and 
+Technology of Southern Philippines.</p>
       </div>
-
-
-
-      </div>
-
-
 
 
 
