@@ -8,12 +8,12 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import GitHubIcon from '@mui/icons-material/GitHub';
 import InstagramIcon from '@mui/icons-material/Instagram';
-
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
+import { Button } from '@mui/material';
+import MultiActionAreaCard from './components/card';
+import networkin1 from '../src/assets/networking1.png'
+import networkin2 from '../src/assets/netacad.png'
+import web from '../src/assets/DesignWeb.png'
+import snake from '../src/assets/pythonbegginer.png'
 
 
 function App() {
@@ -96,8 +96,39 @@ function App() {
         <div className="introabout">
 
           <h2>About Jayde</h2>
-          <p>I am currently 4th year student in University of Science and 
+          <p>I am currently 4th year I.T student in University of Science and 
   Technology of Southern Philippines.</p>
+        </div>
+        <div className="certificate">
+
+          <div className="certtitle">
+            <h3>Certificates</h3>
+            <p>Here's are my e-certificate for finishing an online course!</p>
+          </div>
+
+          <div className='certcards'>
+
+            <MultiActionAreaCard
+              title="CCNAv7: Switching, Routing, and Wireless Essentials (certificate)"
+              description="Cisco Networking Academy"
+              image={networkin2}
+              />
+          
+
+            <MultiActionAreaCard
+              title="DICT-WD002 Using HTML and CSS to Design a Website"
+              description="DICT through the Modern Academics Convergence Hub (MACH)"
+              image={web}
+              />
+
+            <MultiActionAreaCard
+              title="Programming for Beginners Using Python"
+              description="DICT through the Modern Academics Convergence Hub (MACH)"
+              image={snake}
+              />            
+
+          </div>
+
         </div>
 
         <div className="timeline">
@@ -137,42 +168,7 @@ function App() {
 
         </div>
 
-        <div className="certificate">
 
-          <div className="certtitle">
-            <h3>Certificates & Letters</h3>
-            <p>Here's are my e-certificate for finishing a course!</p>
-          </div>
-
-          <div className='certcards'>
-            <Card sx={{ maxWidth: 345 }}>
-              <CardActionArea>
-                <CardMedia
-                  component="img"
-                  height="140"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                  alt="green iguana"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Design Web
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with over 6,000
-                    species, ranging across all continents except Antarctica
-                  </Typography>
-                </CardContent>
-              </CardActionArea>
-              <CardActions>
-                <Button size="small" color="primary">
-                  Share
-                </Button>
-              </CardActions>
-            </Card>          
-
-          </div>
-
-        </div>
 
       </div>
 

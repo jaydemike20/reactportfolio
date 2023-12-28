@@ -7,7 +7,7 @@
 }
 
 .App{
-  background-color: #fff;
+  background-color: #000;
   width: 100%;
   height: 100%;
 }
@@ -170,10 +170,11 @@ nav a:hover {
 
 
 .about {
-  height: 90vh;
-  color: black;
+  height: auto;
+  color: #fff;
   padding: 75px 100px;
   margin: 0% 15%;
+  background-color: #000;
 }
 
 .introabout {
@@ -275,3 +276,28 @@ nav a:hover {
   }
 }
 
+.certificate {
+  padding: 15px 0px;
+  text-align: center;
+}
+
+.certtitle h3 {
+  font-size: 30px;
+  padding-bottom: 20px;
+}
+
+.certtitle p {
+  font-size: 20px;
+  padding-bottom: 20px;
+
+}
+
+
+.certcards {
+  display: flex;
+  flex-wrap: wrap;
+  list-style: none;
+  margin: 0% 12%;
+  padding: 0;
+  padding-left: 30px;
+}
