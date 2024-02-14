@@ -18,7 +18,7 @@ export default function MultiActionAreaCard({ image, title, description }) {
 
   return (
     <div>
-      <Card sx={{ width: 350, margin: 2, backgroundColor: 'black' }}>
+      <Card sx={{ width: 350, height: 270, margin: 2, backgroundColor: 'white' }}>
         <CardActionArea onClick={handleOpen}>
           <CardMedia
             component="img"
@@ -27,7 +27,7 @@ export default function MultiActionAreaCard({ image, title, description }) {
             alt="Image Alt Text"
           />
           <CardContent sx={{ color: 'white' }}>
-            <Typography gutterBottom variant="h6" component="div" sx={{ color: 'white' }}>
+            <Typography gutterBottom variant="h6" component="div" sx={{ color: 'black' }}>
               {title}
             </Typography>
             <Typography variant="body3" sx={{ color: '#11a372' }}>
