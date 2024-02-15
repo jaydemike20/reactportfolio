@@ -34,12 +34,14 @@
     cursor: pointer;
     background-color: black;
     color: white;
+    transition: transform 0.3s ease 0s;
 }
 
 .container-left button:hover {
     color: black;
     background-color: #fff;
     border: 2px solid black;
+    transform: translateY(-10px);
 }
 
 .container-left {

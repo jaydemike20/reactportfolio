@@ -12,16 +12,16 @@ export const Home = () => {
             <div className="container-left">
                 <h3>Hello!</h3>
                 <h1>I'm Jayde Mike Engracia</h1>
-                <p>Aspiring Full-Stack Developer and Software Developer 👨‍💻|</p>
+                <p>Aspiring Full-Stack Developer and Software Engineer 👨‍💻|</p>
                 <button>Download CV!</button>
 
                 <div className="icons">
                     <ul>
-                        <li><a href="#" target="_blank"><FaFacebook color="blue" size="3rem" /></a></li>
-                        <li><a href="#" target="_blank"><FaSquareXTwitter color="black" size="3rem" /></a></li>
-                        <li><a href="#" target="_blank"><FaInstagramSquare color="#FD1D1D" size="3rem" /></a></li>
-                        <li><a href="#" target="_blank"><FaLinkedin color="blue" size="3rem" /></a></li>
-                        <li><a href="#" target="_blank"><FaGithub color="black" size="3rem" /></a></li>
+                        <li><a href="https://www.facebook.com/jydmk21" target="_blank"><FaFacebook color="blue" size="3rem" /></a></li>
+                        <li><a href="https://twitter.com/jydmk21" target="_blank"><FaSquareXTwitter color="black" size="3rem" /></a></li>
+                        <li><a href="https://www.instagram.com/jydmk21/" target="_blank"><FaInstagramSquare color="#FD1D1D" size="3rem" /></a></li>
+                        <li><a href="https://www.linkedin.com/in/jaydemike21/" target="_blank"><FaLinkedin color="blue" size="3rem" /></a></li>
+                        <li><a href="https://github.com/jaydemike20" target="_blank"><FaGithub color="black" size="3rem" /></a></li>
 
                     </ul>
                 </div>
