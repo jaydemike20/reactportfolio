@@ -14,23 +14,23 @@
 }
 
 .container-left h3 {
-    font-size: 25px;
+    font-size: 2rem;
     letter-spacing: 2px;
 }
 
 .container-left h1 {
-    font-size: 35px;
+    font-size: 3rem;
     letter-spacing: 2px;
 }
 
 .container-left p {
-    font-size: 30px;
+    font-size: 2rem;
 }
 
 .container-left button {
     padding: 10px 100px;
     border: 0px none;
-    font-size: 20px;
+    font-size: 1.5rem;
     cursor: pointer;
     background-color: black;
     color: white;
@@ -46,15 +46,22 @@
     font-size: 30px;
 }
 
-.icons ul {
-    padding-top: 30px;
+.icons {
+    width: 100%;
     display: flex;
+    justify-content: left;
+}
+
+.icons ul {
+    padding-top: 1.5rem;
+    display: flex;
+
 }
 
 .icons ul li {
     list-style: none;
     display: inline-block;
-    margin-right: 30px;
+    margin-right: 2.5rem;
 }
 
 .icons ul li a {
@@ -76,11 +83,19 @@
     .container {
         flex-direction: column;
         text-align: center;
+        padding: 0;
     }
 
     .container-right {
         order: -1;
     }
+
+    .icons {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+    
 
     .icons ul {
         text-align: center;
@@ -98,6 +113,7 @@
         margin: 0;
         padding: 0;
     }
+
 
     .container-right {
         text-align: center;
