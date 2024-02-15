@@ -65,7 +65,7 @@ nav .menu span {
     nav .title {
         width: 100%;
         display: flex;
-        justify-content: center;
+        justify-content: left;
     }
 
     nav .menu {
@@ -75,7 +75,6 @@ nav .menu span {
     nav {
         flex-direction: column;
         align-items: start;
-        
 
     }
 

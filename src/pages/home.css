@@ -23,9 +23,68 @@
     letter-spacing: 2px;
 }
 
-.container-left p {
+.animated-text {   
     font-size: 2rem;
+    min-width: 280px;
 }
+
+.container-left span {
+    position: relative;   
+    letter-spacing: 2px; 
+    font-weight: 700;
+}
+
+.container-left span::before {
+    content: "Software Engineer";
+    color: green;
+    animation: words 20s infinite;
+}
+
+.container-left span::after {
+    content: "";
+    position: absolute;
+    top: 0px;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: white;
+    border-left: 3px solid black;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to {
+        border-left: 2px solid #ff7f5000 ;
+    }
+}
+
+@keyframes words {
+    0%, 20% {
+        content: "Software Engineer" ;
+    }
+    21%, 40% {
+        content: "Front-End Developer" ;
+    }
+    41%, 60% {
+        content: "Backend Developer" ;
+    }
+    61%, 80% {
+        content: "Mobile Developer" ;
+    }
+    81%, 100% {
+        content: "Full-Stack Developer" ;
+    }
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
 
 .container-left button {
     padding: 10px 100px;
@@ -81,6 +140,13 @@
     margin: 0% 2rem;
 }
 
+@media (max-width:1350px) {
+    .animated-text {   
+        font-size: 1.5rem;
+        min-width: 100px;
+    }
+}
+
 @media (max-width:900px) {
     .container {
         flex-direction: column;
@@ -122,5 +188,10 @@
         padding-bottom: 200px;
         margin: 0;
         padding: 0;
+    }
+
+    .animated-text {   
+        font-size: 1.5rem;
+        min-width: 280px;
     }
 }

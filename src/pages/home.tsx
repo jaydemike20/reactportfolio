@@ -7,12 +7,14 @@ import { FaSquareXTwitter } from "react-icons/fa6";
 
 export const Home = () => {
     return(
-        
         <div className="container">
             <div className="container-left">
                 <h3>Hello!</h3>
                 <h1>I'm Jayde Mike Engracia</h1>
-                <p>Aspiring Full-Stack Developer and Software Engineer 👨‍💻|</p>
+                <div className="animated-text">
+                👨‍💻Aspiring <span></span>
+
+                </div>
                 <button>Download CV!</button>
 
                 <div className="icons">
