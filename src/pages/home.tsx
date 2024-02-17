@@ -1,6 +1,6 @@
 import React from "react";
 import './home.css';
-import profileImage from '../../src/assets/image.webp'
+import profileImage from '../../src/assets/image.png'
 import { Link } from "react-router-dom";
 import { FaFacebook, FaGithub, FaInstagramSquare , FaLinkedin } from "react-icons/fa";
 import { FaSquareXTwitter } from "react-icons/fa6";

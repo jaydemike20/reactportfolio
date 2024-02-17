@@ -1,12 +1,5 @@
 import React from "react";
 import './about.css';
-import { Container } from "react-bootstrap";
-import Card from '@mui/material/Card';
-import CardContent from '@mui/material/CardContent';
-import CardMedia from '@mui/material/CardMedia';
-import Typography from '@mui/material/Typography';
-import { Button, CardActionArea, CardActions } from '@mui/material';
-
 import networking from '../../src/assets/netacad.png'
 import pythonCert from '../../src/assets/pythonbegginer.png'
 import pythonintermediate from '../../src/assets/intermediate.png'
@@ -16,7 +9,7 @@ import MultiActionAreaCard from "../components/card";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 
-import html from '../../src/assets/html.png'
+import techstack from '../components/logo'
 
 const responsive = {
     desktop: {
@@ -111,13 +104,12 @@ export const About = () => {
                         <h3>My Tech Stack</h3>
                         <p>Technologies I've been working with recently</p>
                     </div>
-
                     <div className="logo-container">
-
-                        <div className="logo">
-                            <img src={html} alt="html logo" />
+                    {Object.entries(techstack).map(([techName, logo]) => (
+                        <div className="logo" key={techName}>
+                        <img src={logo} alt={`${techName} logo`} />
                         </div>
-
+                    ))}
                     </div>
                 </div>
 
