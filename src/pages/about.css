@@ -64,15 +64,16 @@
   .certificates::-webkit-scrollbar {
     display: none; /* Hide scrollbar for WebKit browsers (Safari, Chrome) */
 }
-  .certcards {
+
+.logo-container {
     display: flex;
-    flex-wrap: nowrap;
-    list-style: none;
-    padding: 0;
-    overflow-x: auto;
+    
 }
 
-
+.logo {
+    width: 96px;
+    height: 96px;
+}
 
 /* .techstack {
 

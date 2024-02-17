@@ -18,7 +18,7 @@ export default function MultiActionAreaCard({ image, title, description }) {
 
   return (
     <div>
-      <Card sx={{ width: 350, height: 270, margin: 1, backgroundColor: '#393E46' }}>
+      <Card sx={{ width: 350, height: 270, margin: 0, padding: 0, backgroundColor: '#393E46', boxShadow: 3  }}>
         <CardActionArea onClick={handleOpen}>
           <CardMedia
             component="img"
@@ -38,7 +38,7 @@ export default function MultiActionAreaCard({ image, title, description }) {
       </Card>
 
       <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>{title}</DialogTitle>
+        <DialogTitle sx={{fontWeight: 900 }}>{title}</DialogTitle>
         
         <DialogContent>
           <CardMedia
@@ -48,7 +48,7 @@ export default function MultiActionAreaCard({ image, title, description }) {
             width="100%"
             height="100%"
           />
-          <Typography variant="body2" sx={{ color: '#11a372' }}>
+          <Typography variant="body2" sx={{ color: '#11a372'}}>
             {description}
           </Typography>
 
