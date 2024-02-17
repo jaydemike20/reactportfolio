@@ -17,11 +17,8 @@ import snake from '../src/assets/pythonbegginer.png'
 import { hover } from '@testing-library/user-event/dist/hover';
 import { Navbar } from './components/navbar';
 import { Route, Routes } from 'react-router-dom';
-import { About } from './pages/about';
-import { Services } from './pages/services';
-import { Works } from './pages/works';
-import { Contact } from './pages/contact';
 import { Home } from './pages/home';
+import { About } from './pages/about';
 
 
 function App() {
@@ -43,13 +40,8 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        <Route path='/' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/works' element={<Works />} />
-        <Route path='/contact' element={<Contact />} />        
-      </Routes>
+      <Home  />
+      <About />
 
 
 

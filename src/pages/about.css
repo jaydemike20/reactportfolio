@@ -1,0 +1,82 @@
+.container-about {
+    height: 100%;
+
+    /* background-color: #393E46; */
+
+}
+
+.about-header {
+    padding: 10px;
+    text-align: center;
+    background-color: #393E46;
+    color: white;
+
+}
+
+.about-header h1 {
+    font-size: 5rem;
+    letter-spacing: 5px;
+}
+
+.about-header h3 {
+    margin: 0px 0px;
+    letter-spacing: 2px;
+    font-weight: 300;
+}
+
+.about-introduction {
+    text-align: center;
+    margin: 20px 0%;
+}
+
+
+
+
+.about-body {
+    height: 100vh;
+    padding: 0px 100px;
+    margin: 0% 10%;
+
+}
+
+.certificates {
+    margin: 2rem 0px;   
+
+}
+
+.certtitle {
+    font-size: 34px;
+    text-transform: capitalize;
+    letter-spacing: 2px;
+}
+
+.certtitle h3 {
+    font-size: 30px;
+    padding-bottom: 20px;
+  }
+  
+  .certtitle p {
+    font-size: 20px;
+    padding-bottom: 20px;
+  
+  }
+  
+  .certificates::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for WebKit browsers (Safari, Chrome) */
+}
+  .certcards {
+    display: flex;
+    flex-wrap: nowrap;
+    list-style: none;
+    padding: 0;
+    overflow-x: auto;
+}
+
+
+
+/* .techstack {
+
+}
+ */
+
+

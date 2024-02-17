@@ -12,7 +12,7 @@ export const Home = () => {
                 <h3>Hello!</h3>
                 <h1>I'm Jayde Mike Engracia</h1>
                 <div className="animated-text">
-                👨‍💻Aspiring <span></span>
+                Aspiring <span></span>
 
                 </div>
                 <button>Download CV!</button>

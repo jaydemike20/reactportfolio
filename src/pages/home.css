@@ -1,17 +1,18 @@
 .container {
     width: 100%;
-    height: 90%;
+    height: 94vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 10rem;
+    background-color: #F2E7D5;
 }
 
 .container-left {
-    line-height: 60px;
+    line-height: 65px;
     padding-bottom: 5rem;
     margin: 0% 2rem;
-    
+    font-size: 30px;
+
 }
 
 .container-left h3 {
@@ -49,8 +50,8 @@
     top: 0px;
     width: calc(100% + 8px);
     height: 100%;
-    background-color: white;
-    border-left: 3px solid black;
+    background-color: #F2E7D5;
+    border-left: 3px solid green;
     right: -8px;
     animation: cursor .8s infinite, typing 20s steps(14) infinite;
 }
@@ -94,7 +95,7 @@
     border: 0px none;
     font-size: 1.5rem;
     cursor: pointer;
-    background-color: black;
+    background-color: #6D9886;
     color: white;
     transition: transform 0.3s ease 0s;
     
@@ -108,9 +109,6 @@
     box-shadow: 4px 16px 24px -7px rgba(0, 0, 0, 1)
 }
 
-.container-left {
-    font-size: 30px;
-}
 
 .icons {
     width: 100%;
@@ -142,8 +140,8 @@
 
 .container-right {
     text-align: center;
-    padding-bottom: 200px;
-    margin: 0% 2rem;
+    margin: 1rem 2rem;
+    padding-bottom: 250px;
 }
 
 @media (max-width:1350px) {
@@ -158,6 +156,7 @@
         flex-direction: column;
         text-align: center;
         padding: 0;
+        
     }
 
     .container-right {
@@ -194,6 +193,7 @@
         padding-bottom: 200px;
         margin: 0;
         padding: 0;
+        padding-top: 30px;
     }
 
     .animated-text {   
