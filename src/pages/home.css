@@ -152,6 +152,7 @@
     position: relative;
     box-shadow: 0 0 35px rgba(218,20,255, 1);
     animation: suguoni 8s ease-in-out infinite;
+    background-color: #f7f7f7;
 }
 
 @keyframes suguoni {
@@ -192,6 +193,7 @@
         width: 100%;
         display: flex;
         justify-content: center;
+        margin: 20px 0px;
     }
     
 

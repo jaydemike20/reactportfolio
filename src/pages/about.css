@@ -1,7 +1,6 @@
 .container-about {
     height: 100%;
-
-    /* background-color: #393E46; */
+    padding-bottom: 1rem;
 
 }
 
@@ -19,9 +18,9 @@
 }
 
 .about-header h3 {
-    margin: 0px 0px;
     letter-spacing: 2px;
     font-weight: 300;
+    padding: 20px;
 }
 
 .about-introduction {
@@ -33,14 +32,13 @@
 
 
 .about-body {
-    height: 100vh;
+    height: auto;
     padding: 0px 100px;
     margin: 0% 10%;
-
 }
 
 .certificates {
-    margin: 2rem 0px;   
+    margin: 5rem 0px;   
 
 }
 
@@ -57,7 +55,7 @@
   
   .certtitle p {
     font-size: 20px;
-    padding-bottom: 20px;
+    padding-bottom: 50px;
   
   }
   
@@ -75,6 +73,8 @@
 }
 
 .logo {
+    max-width: 300px;
+    height: auto;
     margin: 2%;
     cursor: pointer;
     box-shadow: 2px 22px 48px 11px rgba(57,62,70,0.94);
@@ -94,6 +94,7 @@
     .logo-container {
         flex-wrap: wrap;
         margin: 0%;
+        margin-bottom: 100px;
     }
 
 
@@ -114,8 +115,9 @@
         padding: 0%;
     }
 
-    .logo {
-        margin: 5%;
+    .logo img{
+        max-width: 70px;
+        margin: 5% 2%;
     }
 }
 
