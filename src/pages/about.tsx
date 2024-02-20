@@ -39,7 +39,7 @@ const responsive = {
 export const About = () => {
 
     return(
-        <div className="container-about" id="about">
+        <div className="container-about" id="about" >
             
             <div className="about-header">
                 <h1>👨🏻‍💻About Jayde👨🏻‍💻</h1>

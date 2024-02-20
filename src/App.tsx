@@ -16,31 +16,9 @@ import { Contact } from './pages/contact';
 
 function App() {
 
-  const [greeting, setGreeting] = useState('Hello! 👋');
-  const greetings = ['Hello! 👋', 'Mabuhay! 👋', 'こんにちは 👋'];
-
-  useEffect(() => {
-    const intervalId = setInterval(() => {
-      const randomIndex = Math.floor(Math.random() * greetings.length);
-      setGreeting(greetings[randomIndex]);
-    }, 3000);
-
-    return () => clearInterval(intervalId); // Cleanup the interval on component unmount
-  }, []); // Empty dependency array ensures the effect runs only once on component mount
-
-
-
   return (
     <div className="App">
-      <Navbar />
-      <Routes>
-        <Route path='/home' element={<Home />} />
-        <Route path='/about' element={<About />} />
-        <Route path='/services' element={<Services />} />
-        <Route path='/works' element={<Works />} />
-        <Route path='/contact' element={<Contact />} />        
-      </Routes>
-
+      <Home />
     </div>
   );
 }
