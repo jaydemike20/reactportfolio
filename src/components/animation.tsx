@@ -12,17 +12,15 @@ export const Reveal = ({children, width = 'fit-content'}: Props) => {
     const isInView = useInView(ref, { once: true})
 
     const mainControls = useAnimation();
-    const slideControls = useAnimation();
 
     useEffect(() => {
         if (isInView) {
             mainControls.start("visible")
-            slideControls.start("visible")
         }
     }, [isInView])
 
     return (
-        <div ref={ref} style={{margin: 0, padding: 0, position: "relative", width, overflow: "hidden",}}>
+        <div ref={ref} style={{margin: 0, padding: 0, position: "relative", width, overflow: "hidden", textAlign: 'center',}}>
             <motion.div
             variants={{
                 hidden: {opacity: 0, y: 75},
@@ -32,24 +30,7 @@ export const Reveal = ({children, width = 'fit-content'}: Props) => {
             animate={mainControls}
             transition={{duration: 0.5, delay: 0.25}}
             >{children}</motion.div>
-            <motion.div
-            variants={{
-                hidden: {left: 0},
-                visible: {left: "100%"},
-            }}
-            initial="hidden"
-            animate={slideControls}
-            transition={{duration: 0.5, ease: "easeIn"}}
-            style={{
-                position: "absolute",
-                top: 4,
-                left: 0,
-                bottom: 0,
-                right: 0,
-                background: "var(--brand)",
-                zIndex: 20
-            }}
-            >{children}</motion.div>
+
         </div>
     )
 }

@@ -1,5 +1,5 @@
 import React, {useState, ChangeEvent, FormEvent} from "react";
-import './home.css';
+import '../App.css';
 import profileImage from '../../src/assets/image.png'
 import { Link } from "react-router-dom";
 import { FaFacebook, FaGithub, FaInstagramSquare , FaLinkedin } from "react-icons/fa";
@@ -14,6 +14,8 @@ import networking from '../../src/assets/netacad.png'
 import pythonCert from '../../src/assets/pythonbegginer.png'
 import pythonintermediate from '../../src/assets/intermediate.png'
 import web from '../../src/assets/DesignWeb.png'
+import js from '../../src/assets/javascript.png'
+import internship from '../../src/assets/internship cert.png'
 import MultiActionAreaCard from "../components/card";
 import GradientCover from "../components/cardoverlay";
 import frontend from '../assets/frontend.jpg'
@@ -22,10 +24,12 @@ import mobiledev from '../assets/mobiledev.jpg'
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import techstack from '../components/logo';
-import dashboardpic from '../assets/dashboard.png'
+import dashboardpic from '../assets/etcmf.png'
 import sarisaristore from '../assets/cantonan.png'
 import { RiReactjsFill } from "react-icons/ri";
 import { Reveal } from "../components/animation";
+import { Javascript } from "@mui/icons-material";
+import cvFile from '../assets/CV - Jayde Mike Engracia.png'; // import your CV file
 
 
 const responsive = {
@@ -76,72 +80,85 @@ export const Home = () => {
     
     
         const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
-            e.preventDefault();
-            let isValid = true;
-            const newErrors = { ...errors };
+            // e.preventDefault();
+            // let isValid = true;
+            // const newErrors = { ...errors };
     
-            // Validate form fields
-            if (formData.name.trim() === '') {
-                newErrors.name = 'Full Name is Empty';
-                isValid = false;
-            } else {
-                newErrors.name = '';
-            }
+            // // Validate form fields
+            // if (formData.name.trim() === '') {
+            //     newErrors.name = 'Full Name is Empty';
+            //     isValid = false;
+            // } else {
+            //     newErrors.name = '';
+            // }
     
-            if (formData.email.trim() === '') {
-                newErrors.email = 'Email Address is Empty';
-                isValid = false;
-            } else {
-                newErrors.email = '';
-            }
+            // if (formData.email.trim() === '') {
+            //     newErrors.email = 'Email Address is Empty';
+            //     isValid = false;
+            // } else {
+            //     newErrors.email = '';
+            // }
     
-            if (formData.message.trim() === '') {
-                newErrors.message = 'Message is Empty';
-                isValid = false;
-            } else {
-                newErrors.message = '';
-            }
+            // if (formData.message.trim() === '') {
+            //     newErrors.message = 'Message is Empty';
+            //     isValid = false;
+            // } else {
+            //     newErrors.message = '';
+            // }
     
-            // Update errors state
-            setErrors(newErrors);
+            // // Update errors state
+            // setErrors(newErrors);
     
             // If form is valid, submit it
-            if (isValid) {
-                // Here you can send the form data to your server using fetch or any other method
-                alert('Form submitted successfully!');
+            // if (isValid) {
+            //     // Here you can send the form data to your server using fetch or any other method
+            //     alert('Form submitted successfully!');
 
 
-                const recipient = 'jaydemike21@gmail.com';
-                const subject = encodeURIComponent('Contact Request');
-                const body = encodeURIComponent('Hello,\n\nI would like to get in touch with you.');
+            //     const recipient = 'jaydemike21@gmail.com';
+            //     const subject = encodeURIComponent('Contact Request');
+            //     const body = encodeURIComponent('Hello,\n\nI would like to get in touch with you.');
         
-                window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+            //     window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
                                  
-                // Reset form data
-                setFormData({
-                    name: '',
-                    email: '',
-                    message: ''
-                });
-            }
+            //     // Reset form data
+            //     setFormData({
+            //         name: '',
+            //         email: '',
+            //         message: ''
+            //     });
+            // }
+
+            const recipient = 'jaydemike21@gmail.com';
+            const subject = encodeURIComponent('<SUBJECT HERE PLS>');
+            const body = encodeURIComponent('Hello,\n\nI would like to get in touch with you.');
+    
+            window.location.href = `mailto:${recipient}?subject=${subject}&body=${body}`;
+                             
         };
     
-
+        const downloadCV = () => {
+            const link = document.createElement('a');
+            link.href = cvFile;
+            link.download = 'Engracia_CV'; // specify the name of the downloaded file
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+          };
 
     return(
         <div id="home">
             {/* navbar */}
             <div>
                <nav>
-                    <Reveal>
-                        <h1 className="title">Portfolio</h1>
-                    </Reveal>
+                    <h1 className="title">Portfolio</h1>
                     <div className="menu" onClick={() => {
                         setMenuOpen(!menuOpen);
                     }}>
                         <span></span>
                         <span></span>
                         <span></span>
+
                     </div>
                     <Reveal>
                         <ul className={menuOpen ? "open" : ""}>
@@ -150,15 +167,15 @@ export const Home = () => {
                             <li><a href="#services">Services</a></li>
                             <li><a href="#works">Works</a></li>
                             <li><a href="#contact">Contact</a></li>
-                        </ul>                        
-                    </Reveal>
-
+                        </ul>
+                        </Reveal>
                 </nav>   
              
             </div>
 
             {/* home */}
             <div className="container"  >
+                
                 <div className="container-left">
                     <Reveal>
                     <h3>Hello!</h3>
@@ -173,7 +190,7 @@ export const Home = () => {
                     </div>
                     </Reveal>
                     <Reveal>
-                    <button>Download CV!</button>
+                    <button onClick={downloadCV}>Download CV!</button>
                     </Reveal>
 
                     <Reveal>
@@ -190,26 +207,27 @@ export const Home = () => {
                     </div>
                     </Reveal>
 
-                    </div>
+                </div>  
 
+                <div className="container-right">
                     <Reveal>
-                    <div className="container-right">
-                    <img src={profileImage} alt='Mi imahe' />
-                </div>
+                    <img src={profileImage} alt='Mi imahe' width={350} />
 
                     </Reveal>
-
-
-
-        
+                </div>
             </div>
 
             {/* about */}
             <div className="container-about" id="about" >
+
             <div className="about-header">
-                <h1>👨🏻‍💻About Jayde👨🏻‍💻</h1>
-                <h3>I am graduating👨🏻‍🎓 4th year I.T student in University of Science and 
-    Technology of Southern Philippines.</h3>
+
+                <h1>About Jayde</h1>
+
+
+
+                <h3 className="abouth3">I am graduating I.T student in University of Science and 
+                Technology of Southern Philippines.</h3>
             </div>
 
 
@@ -228,6 +246,22 @@ export const Home = () => {
                         responsive={responsive}
                         partialVisible={true}
                         >
+                            <Reveal>
+                            <MultiActionAreaCard
+                            title="On-Job-Training (486 hours)"
+                            description="Wela Online Corp"
+                            image={internship}
+                            />                       
+                            </Reveal>                             
+                            <Reveal>
+                                <MultiActionAreaCard
+                                title="DICT-WD003 Basic Javascript for Web Development"
+                                description=" Department of Information and Communications Technology through the DICTLMS"
+                                image={js}
+                                />                       
+                            </Reveal>  
+
+                            
                             <Reveal>
                                 <MultiActionAreaCard
                                 title="Programming for Intermediate Users Using Python"
@@ -257,7 +291,8 @@ export const Home = () => {
                                 description="DICT through the Modern Academics Convergence Hub (MACH)"
                                 image={web}
                                 />                       
-                            </Reveal>                                
+                            </Reveal>       
+                          
                         </Carousel>
 
                     </div>
@@ -283,6 +318,8 @@ export const Home = () => {
                     </div>
                 </div>
 
+
+
             </div>
 
             
@@ -295,7 +332,7 @@ export const Home = () => {
                 <div className="service-content">
                     <div className="service-header">
                         <Reveal>
-                        <h3>My Services💦 </h3>
+                        <h3>My Services</h3>
                         </Reveal>
                         <Reveal>
                         <h1>What I DO</h1>       
@@ -341,10 +378,9 @@ export const Home = () => {
             <div className="works-container" id="works">
                 <div className="works-content">
 
-                    <div className="works-header">
-                        <Reveal>
-                        <h1>My Works</h1>
-                        </Reveal>
+                    <div className="works-header">                
+                                         <h1>My Works</h1>
+                                    <p className="worksp">Deployed Project</p>
                     </div>
 
                     <div className="worksdivider">
@@ -363,8 +399,9 @@ export const Home = () => {
                                     <li><SiExpo className="workicons" color="black" /></li>
                                     <li><SiDjango className="workicons" color="green" /></li>
                                 </ul>
-                                <a href="https://etcmf1.netlify.app/" target="__blank">Live Demo</a>
-                                
+                                <a href="https://github.com/jaydemike20/backendcitisafe" className="sourcecode" style={{marginRight: '2rem'}} target="__blank">Source Code</a>
+                                <a href="https://etcmf.netlify.app/" className="live" target="__blank">Live Demo</a>
+
                             </div>
                         </div>
                         </Reveal>
@@ -381,7 +418,8 @@ export const Home = () => {
                                 <ul>
                                     <li><RiReactjsFill className="workicons" color="#61DBFB"/></li>
                                 </ul>
-                                <a href="https://jaydemike20.github.io/appdev/" target="__blank">Live Demo</a>
+                                <a href="https://github.com/jaydemike20/appdev" className="sourcecode" style={{marginRight: '2rem'}} target="__blank">Source Code</a>
+                                <a href="https://jaydemike20.github.io/appdev/" className="live" target="__blank">Live Demo</a>
                                 
                             </div>
                         </div>
@@ -389,6 +427,58 @@ export const Home = () => {
                         </Reveal>
                     </div>
                     
+
+                    {/* <div className="works-header">
+                        <Reveal>
+                            <div>
+                                <p className="ongoingp">Ongoing Projects</p>
+                            </div>
+                        </Reveal>
+                    </div>
+
+                                        <div className="worksdivider">
+
+                        <Reveal>
+                        <div className="divider">
+                            <div className="picture">
+                                <img src={dashboardpic} alt="Dashboard" />
+                            </div>
+
+                            <div className="description">
+                                <h4>eTCMF</h4>
+                                <p>eTCMF is a web and mobile application designed for electronic ticketing systems. The application incorporates OCR technology to extract information from documents, including driver's licenses and OR/CR. In this project, my primary focus lies in backend development. Additionally, I am responsible for establishing and managing the API connections between the web, mobile and our server.</p>
+                                <ul>
+                                    <li><RiReactjsFill className="workicons" color="#61DBFB"/></li>
+                                    <li><SiExpo className="workicons" color="black" /></li>
+                                    <li><SiDjango className="workicons" color="green" /></li>
+                                </ul>
+                                <a href="https://github.com/jaydemike20/backendcitisafe" className="sourcecode" style={{marginRight: '2rem'}} target="__blank">Source Code</a>
+                                <a href="https://etcmf.netlify.app/" className="live" target="__blank">Live Demo</a>
+
+                            </div>
+                        </div>
+                        </Reveal>
+
+                        <Reveal>
+                        <div className="divider">
+                            <div className="picture">
+                                <img src={sarisaristore} alt="Dashboard" />
+                            </div>
+
+                            <div className="description">
+                                <h4>Sari-Sari Store</h4>
+                                <p>Sari-Sari Store utilizes browser localStorage for agile development, facilitating rapid prototyping and iteration. Storing crucial business data locally enables quick feature testing without server-side infrastructure. This approach enables frequent updates, ensuring the app meets evolving small business needs efficiently.</p>
+                                <ul>
+                                    <li><RiReactjsFill className="workicons" color="#61DBFB"/></li>
+                                </ul>
+                                <a href="https://github.com/jaydemike20/appdev" className="sourcecode" style={{marginRight: '2rem'}} target="__blank">Source Code</a>
+                                <a href="https://jaydemike20.github.io/appdev/" className="live" target="__blank">Live Demo</a>
+                                
+                            </div>
+                        </div>
+
+                        </Reveal>
+                    </div> */}
 
                 </div>
             </div>
@@ -399,7 +489,7 @@ export const Home = () => {
                     <h2>Contact Me</h2>
 
                     <form onSubmit={handleSubmit}>
-                        <div className="input-box">
+                        {/* <div className="input-box">
                             <div className="input-field field">
                                 <input type="text" placeholder="Full Name" id="name" className="item" autoComplete="off" value={formData.name} onChange={(e) => {
                                     setFormData({
@@ -426,9 +516,9 @@ export const Home = () => {
                                 }} />
                                 <div className="error-txt">{errors.message}</div>
 
-                            </div>
+                            </div> */}
 
-                            <button type="submit" className="submitbtn">Send Message</button>
+                            <button type="submit" className="submitbtn">Click Here!</button>
                     </form>
 
                 </div>

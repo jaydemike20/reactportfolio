@@ -1,5 +1,5 @@
 import React from "react";
-import './about.css';
+import '../App.css';
 import networking from '../../src/assets/netacad.png'
 import pythonCert from '../../src/assets/pythonbegginer.png'
 import pythonintermediate from '../../src/assets/intermediate.png'
