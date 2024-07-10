@@ -177,23 +177,16 @@ export const Home = () => {
             <div className="container"  >
                 
                 <div className="container-left">
-                    <Reveal>
                     <h3>Hello!</h3>
-                    </Reveal>
-                    <Reveal>
                     <h1>I'm Jayde Mike Engracia</h1>
-                    </Reveal>
-                    <Reveal>
+
                     <div className="animated-text">
                     Aspiring <span></span>
 
                     </div>
-                    </Reveal>
-                    <Reveal>
                     <button onClick={downloadCV}>Download CV!</button>
-                    </Reveal>
+                
 
-                    <Reveal>
                     <div className="icons">
                         <ul>
                             <li><a href="https://www.facebook.com/jydmk21" target="_blank"><FaFacebook color="blue" size="3rem" /></a></li>
@@ -205,7 +198,6 @@ export const Home = () => {
 
                         </ul>
                     </div>
-                    </Reveal>
 
                 </div>  
 
@@ -217,118 +209,119 @@ export const Home = () => {
                 </div>
             </div>
 
+
             {/* about */}
             <div className="container-about" id="about" >
 
             <div className="about-header">
 
-                <h1>About Jayde</h1>
+            <h1>About Jayde</h1>
 
 
 
-                <h3 className="abouth3">I am graduating I.T student in University of Science and 
-                Technology of Southern Philippines.</h3>
+            <h3 className="abouth3">I am graduating I.T student in University of Science and 
+            Technology of Southern Philippines.</h3>
             </div>
 
 
             <div   className="about-body">
 
-                <div className="certificates">
+            <div className="certificates">
 
+
+            <div className="certtitle">
+            <h3>Certificates🏅</h3>
+            <p>Here's are my e-certificate for finishing an online course!</p>
+            </div>
+
+            <div className="certcards">
+            <Carousel 
+            responsive={responsive}
+            partialVisible={true}
+            >
+                <Reveal>
+                <MultiActionAreaCard
+                title="On-Job-Training (486 hours)"
+                description="Wela Online Corp"
+                image={internship}
+                />                       
+                </Reveal>                             
+                <Reveal>
+                    <MultiActionAreaCard
+                    title="DICT-WD003 Basic Javascript for Web Development"
+                    description=" Department of Information and Communications Technology through the DICTLMS"
+                    image={js}
+                    />                       
+                </Reveal>  
+
+                
+                <Reveal>
+                    <MultiActionAreaCard
+                    title="Programming for Intermediate Users Using Python"
+                    description="DICT through the DICT-LMS"
+                    image={pythonintermediate}
                     
-                    <div className="certtitle">
-                    <h3>Certificates🏅</h3>
-                    <p>Here's are my e-certificate for finishing an online course!</p>
-                    </div>
+                    />
+                </Reveal>
 
-                    <div className="certcards">
-                        <Carousel 
-                        responsive={responsive}
-                        partialVisible={true}
-                        >
-                            <Reveal>
-                            <MultiActionAreaCard
-                            title="On-Job-Training (486 hours)"
-                            description="Wela Online Corp"
-                            image={internship}
-                            />                       
-                            </Reveal>                             
-                            <Reveal>
-                                <MultiActionAreaCard
-                                title="DICT-WD003 Basic Javascript for Web Development"
-                                description=" Department of Information and Communications Technology through the DICTLMS"
-                                image={js}
-                                />                       
-                            </Reveal>  
+                <Reveal>
+                    <MultiActionAreaCard
+                    title="CCNAv7: Switching, Routing, and Wireless Essentials (certificate)"
+                    description="Cisco Networking Academy"
+                    image={networking}
+                    />
+                </Reveal>
+                <Reveal>
+                    <MultiActionAreaCard
+                    title="Programming for Beginners Using Python"
+                    description="DICT through the Modern Academics Convergence Hub (MACH)"
+                    image={pythonCert}
+                    />    
+                </Reveal>
+                <Reveal>
+                    <MultiActionAreaCard
+                    title="DICT-WD002 Using HTML and CSS to Design a Website"
+                    description="DICT through the Modern Academics Convergence Hub (MACH)"
+                    image={web}
+                    />                       
+                </Reveal>       
+                
+            </Carousel>
 
-                            
-                            <Reveal>
-                                <MultiActionAreaCard
-                                title="Programming for Intermediate Users Using Python"
-                                description="DICT through the DICT-LMS"
-                                image={pythonintermediate}
-                                
-                                />
-                            </Reveal>
-
-                            <Reveal>
-                                <MultiActionAreaCard
-                                title="CCNAv7: Switching, Routing, and Wireless Essentials (certificate)"
-                                description="Cisco Networking Academy"
-                                image={networking}
-                                />
-                            </Reveal>
-                            <Reveal>
-                                <MultiActionAreaCard
-                                title="Programming for Beginners Using Python"
-                                description="DICT through the Modern Academics Convergence Hub (MACH)"
-                                image={pythonCert}
-                                />    
-                            </Reveal>
-                            <Reveal>
-                                <MultiActionAreaCard
-                                title="DICT-WD002 Using HTML and CSS to Design a Website"
-                                description="DICT through the Modern Academics Convergence Hub (MACH)"
-                                image={web}
-                                />                       
-                            </Reveal>       
-                          
-                        </Carousel>
-
-                    </div>
+            </div>
 
 
-                </div>
+            </div>
 
-                <div className="techstack">
+            <div className="techstack">
 
-                    <div className="certtitle">
-                        <h3>My Tech Stack</h3>
-                        <p>Technologies I've been working with recently</p>
-                    </div>
-                    <div className="logo-container">
-                    {Object.entries(techstack).map(([techName, logo]) => (
-                        <div className="logo" key={techName}>
-                            <Reveal>
-                            <img src={logo} alt={`${techName} logo`} />
+            <div className="certtitle">
+            <h3>My Tech Stack</h3>
+            <p>Technologies I've been working with recently</p>
+            </div>
+            <div className="logo-container">
+            {Object.entries(techstack).map(([techName, logo]) => (
+            <div className="logo" key={techName}>
+                <Reveal>
+                <img src={logo} alt={`${techName} logo`} />
 
-                            </Reveal>
-                        </div>
-                    ))}
-                    </div>
-                </div>
+                </Reveal>
+            </div>
+            ))}
+            </div>
+            </div>
 
 
 
             </div>
 
-            
+
 
 
             </div>
 
-            {/* Services */}
-            <div className="services-container" id="services">
+             {/* Services */}
+             <div className="services-container" id="services">
                 <div className="service-content">
                     <div className="service-header">
                         <Reveal>
@@ -418,9 +411,13 @@ export const Home = () => {
                                 <ul>
                                     <li><RiReactjsFill className="workicons" color="#61DBFB"/></li>
                                 </ul>
+
+                                <div className="description_buttons">
                                 <a href="https://github.com/jaydemike20/appdev" className="sourcecode" style={{marginRight: '2rem'}} target="__blank">Source Code</a>
                                 <a href="https://jaydemike20.github.io/appdev/" className="live" target="__blank">Live Demo</a>
                                 
+                                </div>
+
                             </div>
                         </div>
 
@@ -483,8 +480,8 @@ export const Home = () => {
                 </div>
             </div>
 
-            {/* Contacts */}
-            <div className="contacts-worker" id="contact">
+                       {/* Contacts */}
+                       <div className="contacts-worker" id="contact">
                 <div className="contact">
                     <h2>Contact Me</h2>
 
@@ -523,7 +520,7 @@ export const Home = () => {
 
                 </div>
             </div>
-
+         
         </div>
 
 
